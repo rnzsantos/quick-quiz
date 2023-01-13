@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Karla:wght@700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+/* LAYOUT */
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  background: #EDEDED;
+  position: relative;
+}
+
+header,
+footer {
+  text-align: left;
+  color: #34b3f1;
+  background: #222831;
+}
+
+footer {
+  text-align: center;
+}
+
+.blob {
+  width: 15%;
+  position: absolute;
+  z-index: 0;
+}
+
+.blob--top {
+  top: 0;
+  right: 0;
+}
+
+.blob--bottom {
+  bottom: 0;
+  left: 0;
+}
+
+.container {
+  max-width: 800px;
+  padding: 1em;
+  margin: 0 auto;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu__settings {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+  width: 85%;
+  margin-bottom: 2.5em;
+}
+
+.game-details {
+  margin-bottom: 1em;
+}
+
+/* TYPOGRAPHY */
+h1 {
+  font-family: "Karla", sans-serif;
+}
+
+a {
+  color: #f58840;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+a:active {
+  opacity: 0.6;
+}
+
+.menu__text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.25em;
+}
+
+.setting {
+  font-weight: 500;
+  padding: 1.25em;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.menu__start-btn {
+  font-size: 1rem;
+  font-weight: 700;
+  background: #4d5b9e;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 1em;
+  transition: all ease 0.3s;
+}
+
+.game-details {
+  line-height: 1.5;
+  padding: 0.85em;
+  font-size: 0.90rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  text-transform: capitalize;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+hr {
+  width: 100%;
+}
+
+.question-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.question {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.question-content {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.question__text {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.question__icon {
+  width: 20px;
+}
+
+.question__choices {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.5rem;
+}
+
+.question__choice {
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  line-height: 1.5;
+  padding: 0.25em 0.75em;
+  border: 1px solid #00abb3;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.question__choice--selected {
+  background: #d6dbf5;
+}
+
+#correct {
+  background: #94d7a2;
+  pointer-events: none;
+}
+
+#wrong {
+  background: #f8bcbc;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+#others {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.score-text {
+  align-self: center;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.questions__btn {
+  background: #4d5b9e;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  align-self: center;
+  border-radius: 10px;
+  width: 100%;
+  padding: 0.75em;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.questions__btn--menu {
+  background: none;
+  border: 1px solid #4d5b9e;
+  color: black;
+}
+
+.questions__btn--disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.menu__start-btn:hover,
+.questions__btn:hover {
+  opacity: 0.9;
+}
+
+.menu__start-btn:active,
+.questions__btn:active {
+  opacity: 0.8;
+}
+
+.questions__btn--menu:hover {
+  background: #6577cf;
+  color: white;
+}
+
+.question__choice:hover {
+  background: #bcc6e9;
+}
+
+@media only screen and (min-width: 576px) {
+  .blob {
+    width: 4%;
+  }
+
+  .footer-text {
+    font-size: 1rem;
+  }
+
+  .menu__settings {
+    width: fit-content;
+  }
+
+  .main {
+    gap: 1.5rem;
+  }
+
+  .game-details {
+    font-size: 1.1rem;
+  }
+
+  .questions {
+    gap: 1rem;
+  }
+
+  .question {
+    font-size: 1.1rem;
+    gap: 1rem;
+  }
+
+  .question__icon {
+    width: 3%;
+  }
+
+  .question__choices {
+    font-size: 1rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .question__choice {
+    padding: 10px;
+  }
+
+  .questions__btn {
+    width: 20%;
+  }
+}
