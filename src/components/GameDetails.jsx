@@ -1,3 +1,5 @@
+import "../css/GameDetails.css"
+
 export default function GameDetails(props) {
   const { category, categoryName, difficulty } = props.gameSettings
 

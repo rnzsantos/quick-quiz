@@ -7,14 +7,13 @@ export default function Settings(props) {
   }
 
   return (
-    <div className="menu__settings">
+    <div className="menu__options">
       <select
-        className="setting"
+        className="menu__option"
         name="category"
         id="category"
         value={props.gameSettings.category}
-        onChange={handleChange}
-      >
+        onChange={handleChange}>
         <option value="">Any Category</option>
         <option value="9">General Knowledge</option>
         <option value="10">Entertainment: Books</option>
@@ -43,17 +42,17 @@ export default function Settings(props) {
       </select>
 
       <select
-        className="setting"
+        className="menu__option"
         name="difficulty"
         id="difficulty"
         value={props.gameSettings.difficulty}
-        onChange={handleChange}
-      >
+        onChange={handleChange}>
         <option value="">Any Difficulty</option>
         <option value="easy">Easy</option>
         <option value="medium">Medium</option>
         <option value="hard">Hard</option>
       </select>
+      <hr />
     </div>
   )
 }

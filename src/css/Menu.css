@@ -1,0 +1,44 @@
+.menu {
+  display: grid;
+  text-align: center;
+  justify-content: center;
+}
+
+.menu__title {
+  margin-bottom: 0.8em;
+  font-size: 25px;
+  font-weight: 600;
+  color: #e3f6ff;
+}
+
+.menu__options {
+  display: grid;
+  gap: 1.25em;
+  margin-bottom: 1.25em;
+}
+
+.menu__option {
+  font-weight: 500;
+  padding: 1.25em;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 10px rgb(236, 231, 231, 0.5);
+  border-radius: 5px;
+}
+
+.menu__options hr {
+  opacity: 0.1;
+}
+
+.menu__btn {
+  font-size: 1rem;
+  font-weight: 700;
+  background: #4d5b9e;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 1em;
+  transition: all ease 0.3s;
+  letter-spacing: 0.1rem;
+}

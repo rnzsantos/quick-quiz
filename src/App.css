@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Karla:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Karla:wght@700;900;&display=swap");
 
 *,
 *::before,
@@ -10,20 +10,39 @@
 }
 
 /* LAYOUT */
+body {
+  background: #222831;
+}
+
 #root {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   min-height: 100vh;
-  background: #EDEDED;
-  position: relative;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 header,
 footer {
-  text-align: left;
   color: #34b3f1;
-  background: #222831;
+}
+
+header,
+main,
+footer {
+  padding: 1em;
+}
+
+header {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+main {
+  align-self: center;
+  color: #e3f6ff;
 }
 
 footer {
@@ -46,90 +65,16 @@ footer {
   left: 0;
 }
 
-.container {
-  max-width: 800px;
-  padding: 1em;
-  margin: 0 auto;
-}
-
-.menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.menu__settings {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25em;
-  width: 85%;
-  margin-bottom: 2.5em;
-}
-
-.game-details {
-  margin-bottom: 1em;
-}
-
 /* TYPOGRAPHY */
-h1 {
+.header__title {
   font-family: "Karla", sans-serif;
+  font-weight: 900;
+  text-shadow: 0 0 5px rgba(245, 239, 239, 0.3);
 }
 
+/* LINKS */
 a {
   color: #f58840;
-}
-
-a:hover {
-  opacity: 0.8;
-}
-
-a:active {
-  opacity: 0.6;
-}
-
-.menu__text {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 1.25em;
-}
-
-.setting {
-  font-weight: 500;
-  padding: 1.25em;
-  outline: none;
-  border: none;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
-}
-
-.menu__start-btn {
-  font-size: 1rem;
-  font-weight: 700;
-  background: #4d5b9e;
-  color: #ffffff;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  padding: 1em;
-  transition: all ease 0.3s;
-}
-
-.game-details {
-  line-height: 1.5;
-  padding: 0.85em;
-  font-size: 0.90rem;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  border-radius: 8px;
-  text-transform: capitalize;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-hr {
-  width: 100%;
 }
 
 .question-list {

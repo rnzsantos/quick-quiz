@@ -32,11 +32,11 @@ function App() {
 
   return (
     <>
+      {/* <img className="blob blob--top" src={blobTop} alt="blob" /> */}
 
-      <img className="blob blob--top" src={blobTop} alt="blob" />
       <header>
         <div className="container">
-          <h1>QUICK QUIZ</h1>
+          <h1 className="header__title">QUICK QUIZ</h1>
         </div>
       </header>
 
@@ -65,7 +65,7 @@ function App() {
         </div>
       </footer>
 
-      <img className="blob blob--bottom" src={blobBottom} alt="blob" />
+      {/* <img className="blob blob--bottom" src={blobBottom} alt="blob" /> */}
     </>
   )
 }
