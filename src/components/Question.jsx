@@ -26,11 +26,15 @@ export default function Question(props) {
     )
   })
 
+  const darkMode = props.darkMode ? "" : "dark"
+
   return (
     <>
       <div className="question">
-        <div className="question-content">
-          <p className="question__text">{decode(props.question)}</p>
+        <div className="question__content">
+          <p className={`${darkMode} question__text`}>
+            {decode(props.question)}
+          </p>
           {props.show && (
             <img
               className="question__icon"

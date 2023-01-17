@@ -1,21 +1,31 @@
 .game-details {
-  color: #BFEAF5;
-  line-height: 1.5;
-  font-size: 0.9rem;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  color: #bfeaf5;
   border-radius: 8px;
-  text-transform: capitalize;
-  margin-bottom: 1em;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   display: grid;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
   justify-content: center;
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+  margin-bottom: 1.5em;
   padding: 1em;
+  text-transform: capitalize;
+  text-align: center;
 }
 
 .game-details div {
-  width: max-content;
   justify-self: center;
+  width: max-content;
 }
 
 .game-details hr {
   opacity: 0.1;
+}
+
+@media only screen and (min-width: 576px) {
+  .game-details {
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+  }
 }

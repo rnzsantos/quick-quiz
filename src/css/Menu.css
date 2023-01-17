@@ -1,29 +1,44 @@
-.menu {
+.menu,
+.menu__options {
   display: grid;
+}
+
+.menu__option,
+.menu__btn {
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.menu {
   text-align: center;
-  justify-content: center;
 }
 
 .menu__title {
-  margin-bottom: 0.8em;
-  font-size: 25px;
-  font-weight: 600;
-  color: #e3f6ff;
+  color: #fffbe9;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1.375rem;
+  margin-bottom: 1em;
 }
 
 .menu__options {
-  display: grid;
   gap: 1.25em;
   margin-bottom: 1.25em;
 }
 
 .menu__option {
-  font-weight: 500;
-  padding: 1.25em;
-  outline: none;
-  border: none;
   box-shadow: 0 0 10px rgb(236, 231, 231, 0.5);
-  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  justify-self: center;
+  padding: 1.25em;
+  width: 90%;
+}
+
+.menu__option:focus {
+  outline: 2px solid #03c988;
 }
 
 .menu__options hr {
@@ -31,14 +46,55 @@
 }
 
 .menu__btn {
-  font-size: 1rem;
+  background: #3c79f5;
+  color: #fffbe9;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  background: #4d5b9e;
-  color: #ffffff;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  padding: 1em;
-  transition: all ease 0.3s;
+  font-size: 1.1rem;
+  justify-self: center;
   letter-spacing: 0.1rem;
+  padding: 0.6em;
+  transition: all ease 0.3s;
+  width: 90%;
+}
+
+.menu__btn:focus {
+  outline: 1px solid #e3f6ff;
+}
+
+.menu__btn:hover {
+  background: #4b56d2;
+  outline: none;
+}
+
+.menu__btn:active {
+  opacity: 0.8;
+  outline: none;
+}
+
+@media only screen and (min-width: 576px) {
+  .menu {
+    margin-top: 5em;
+  }
+
+  .menu__title {
+    font-size: 1.5rem;
+  }
+
+  .menu__option {
+    font-size: 0.9rem;
+    justify-self: center;
+    padding: 1.25em;
+    width: 50%;
+  }
+
+  .menu__btn {
+    font-size: 1.2rem;
+    width: 50%;
+  }
+
+  .menu__options hr {
+    width: 50%;
+    justify-self: center;
+  }
 }

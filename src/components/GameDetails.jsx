@@ -1,10 +1,11 @@
 import "../css/GameDetails.css"
 
 export default function GameDetails(props) {
+  const darkMode = props.darkMode ? "" : "dark"
   const { category, categoryName, difficulty } = props.gameSettings
 
   return (
-    <section className="game-details">
+    <section className={`${darkMode} game-details`}>
       <strong>CATEGORY & DIFFICULTY</strong>
       <div>
         <i>{category ? categoryName : "Any Category"}</i>

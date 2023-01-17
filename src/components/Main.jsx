@@ -55,9 +55,13 @@ export default function Main(props) {
     <>
       {questions.length > 0 && (
         <>
-          <GameDetails gameSettings={props.gameSettings} />
+          <GameDetails
+            darkMode={props.darkMode}
+            gameSettings={props.gameSettings}
+          />
 
           <QuestionList
+            darkMode={props.darkMode}
             returnToMenu={props.returnToMenu}
             questions={questions}
             handleClick={handleClick}

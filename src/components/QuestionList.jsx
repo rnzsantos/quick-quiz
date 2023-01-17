@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import Question from "./Question"
+import "../css/QuestionList.css"
 
 export default function QuestionList(props) {
   const [correctAnswers, setCorrectAnswers] = useState(() => 0)
@@ -26,9 +27,15 @@ export default function QuestionList(props) {
   }
 
   const questionElement = props.questions.map(question => (
-    <Question key={question.id} {...question} handleClick={props.handleClick} />
+    <Question
+      key={question.id}
+      darkMode={props.darkMode}
+      {...question}
+      handleClick={props.handleClick}
+    />
   ))
 
+  const darkMode = props.darkMode ? "" : "dark"
   const show = props.questions[0].show
   const style = isDisabled && "questions__btn--disabled"
 
@@ -44,14 +51,14 @@ export default function QuestionList(props) {
 
       <div className="buttons">
         <button
-          className={`questions__btn ${style}`}
+          className={`questions__btn questions__btn--primary ${style}`}
           onClick={show ? startNewGame : props.showAnswers}>
           {show ? "Play Again" : "Check Answers"}
         </button>
 
         {show && (
           <button
-            className="questions__btn questions__btn--menu"
+            className={`${darkMode} questions__btn questions__btn--secondary ${style}`}
             onClick={props.returnToMenu}>
             Menu
           </button>
