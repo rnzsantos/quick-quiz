@@ -86,7 +86,7 @@
 }
 
 .score-text {
-  color: #1a120b;
+  color: #eafdfc;
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   font-weight: 500;
@@ -96,7 +96,7 @@
 }
 
 .light.score-text {
-  color: #eafdfc;
+  color: #1a120b;
 }
 
 .buttons {
