@@ -22,6 +22,10 @@
   margin-bottom: 1em;
 }
 
+.light.menu__title {
+  color: #1a120b;
+}
+
 .menu__options {
   gap: 1.25em;
   margin-bottom: 1.25em;
@@ -35,6 +39,10 @@
   justify-self: center;
   padding: 1.25em;
   width: 90%;
+}
+
+.light.menu__option {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .menu__option:focus {

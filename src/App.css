@@ -10,10 +10,6 @@ body {
   background: #222831;
 }
 
-.dark {
-  color: black;
-}
-
 #root {
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -49,13 +45,14 @@ header .container {
 
 .header__title {
   font-family: "Montserrat", sans-serif;
+  font-size: 1.89rem;
   font-weight: 900;
   text-shadow: 0 0 5px rgba(245, 239, 239, 0.3);
 }
 
 .fa-regular {
-  margin-right: 1em;
   color: gold;
+  margin-right: 0.4em;
 }
 
 main {

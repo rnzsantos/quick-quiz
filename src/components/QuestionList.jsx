@@ -35,7 +35,7 @@ export default function QuestionList(props) {
     />
   ))
 
-  const darkMode = props.darkMode ? "" : "dark"
+  const darkMode = props.darkMode ? "" : "light"
   const show = props.questions[0].show
   const style = isDisabled && "questions__btn--disabled"
 
@@ -44,7 +44,7 @@ export default function QuestionList(props) {
       <div className="questions">{questionElement}</div>
 
       {show && (
-        <span className="score-text">
+        <span className={`${darkMode} score-text`}>
           You scored {correctAnswers}/5 correct answers
         </span>
       )}

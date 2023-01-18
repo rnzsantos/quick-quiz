@@ -25,6 +25,10 @@
   line-height: 1.5;
 }
 
+.light.question__text {
+  color: #1a120b;
+}
+
 .question__icon {
   width: 20px;
 }
@@ -82,13 +86,17 @@
 }
 
 .score-text {
-  color: #eafdfc;
+  color: #1a120b;
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0.1rem;
   margin-bottom: 1.25em;
   text-align: center;
+}
+
+.dark.score-text {
+  color: #eafdfc;
 }
 
 .buttons {
@@ -120,6 +128,10 @@
   border: 1px solid #3c79f5;
 }
 
+.light.questions__btn--secondary {
+  color: #1a120b;
+}
+
 .questions__btn--disabled {
   opacity: 0.5;
   pointer-events: none;
@@ -134,7 +146,7 @@
   outline: none;
 }
 
-.dark.questions__btn--secondary:hover {
+.light.questions__btn--secondary:hover {
   color: #eafdfc;
 }
 

@@ -1,7 +1,7 @@
 import "../css/GameDetails.css"
 
 export default function GameDetails(props) {
-  const darkMode = props.darkMode ? "" : "dark"
+  const darkMode = props.darkMode ? "" : "light"
   const { category, categoryName, difficulty } = props.gameSettings
 
   return (

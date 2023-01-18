@@ -14,9 +14,12 @@
   text-align: center;
 }
 
+.light.game-details {
+  color: #1a120b;
+}
+
 .game-details div {
   justify-self: center;
-  width: max-content;
 }
 
 .game-details hr {

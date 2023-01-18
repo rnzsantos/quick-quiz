@@ -1,4 +1,6 @@
 export default function Settings(props) {
+  const darkMode = props.darkMode ? "" : "light"
+
   const handleChange = e => {
     const { name, value } = e.target
     const element = document.getElementById("category")
@@ -9,7 +11,7 @@ export default function Settings(props) {
   return (
     <div className="menu__options">
       <select
-        className="menu__option"
+        className={`${darkMode} menu__option`}
         name="category"
         id="category"
         value={props.gameSettings.category}
@@ -42,7 +44,7 @@ export default function Settings(props) {
       </select>
 
       <select
-        className="menu__option"
+        className={`${darkMode} menu__option`}
         name="difficulty"
         id="difficulty"
         value={props.gameSettings.difficulty}

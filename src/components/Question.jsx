@@ -26,7 +26,7 @@ export default function Question(props) {
     )
   })
 
-  const darkMode = props.darkMode ? "" : "dark"
+  const darkMode = props.darkMode ? "" : "light"
 
   return (
     <>
